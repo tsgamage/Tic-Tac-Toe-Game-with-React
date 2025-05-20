@@ -1,5 +1,5 @@
-import Player from "./assets/components/Player/Player";
-import GameBoard from "./assets/components/GameBoard/GameBoard";
+import Player from "./components/Player/Player";
+import GameBoard from "./components/GameBoard/GameBoard";
 
 function App() {
   return (
