@@ -1,6 +1,7 @@
 import Player from "./components/Player/Player";
 import GameBoard from "./components/GameBoard/GameBoard";
 import { useState } from "react";
+import Log from "./components/Log/Log";
 
 function App() {
   const [activePlayer, setActivePlayer] = useState("X");
@@ -12,7 +13,7 @@ function App() {
       let currentPlayer = "X";
       console.log(`gameTurns -> length : ${gameTurns.length}`);
       console.log(`gameTurns -> length Bool : ${gameTurns.length > 0}`);
-      
+
       if (gameTurns.length > 0 && gameTurns[0].player === "X") {
         currentPlayer = "O";
       }
@@ -42,6 +43,7 @@ function App() {
         </ol>
         <GameBoard onSelectSquare={handleSelectSquare} turns={gameTurns} />
       </div>
+      <Log turns={gameTurns} />
     </main>
   );
 }
